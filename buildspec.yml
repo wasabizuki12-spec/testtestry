@@ -12,7 +12,7 @@ phases:
   build:
     commands:
       - echo Building the Docker image...
-      - docker build -t container-test-app -f Dockerfile.dockerfile
+      - docker build -t container-test-app -f Dockerfile.dockerfile .
       - docker tag container-test-app:latest ${ECR_REPOSITORY}:latest
   post_build:
     commands:
