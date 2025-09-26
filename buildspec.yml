@@ -18,7 +18,7 @@ phases:
       - |
         echo '[
           {
-            "name": "container-test-app",
+            "name": "kitao-container",
             "imageUri": "'${ECR_REPOSITORY}':latest"
           }
         ]' > imagedefinitions.json
