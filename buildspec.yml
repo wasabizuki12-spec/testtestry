@@ -11,7 +11,7 @@ phases:
   build:
     commands:
       - docker build -t kitao-container -f Dockerfile.txt .
-      - docker tag container-test-app:latest ${ECR_REPOSITORY}:latest
+      - docker tag kitao-container:latest ${ECR_REPOSITORY}:latest
   post_build:
     commands:
       - docker push ${ECR_REPOSITORY}:latest
